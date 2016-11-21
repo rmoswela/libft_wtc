@@ -1,5 +1,7 @@
 #include "libft.h"
 
+/*function to copy n bytes of memory from memory area src to 
+ * memory area destination without overlapping*/
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*cDest;
