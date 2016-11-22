@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 /*function to copy first n bytes from memory area src
  * to memory area dest without overlapping the memory areas*/
@@ -6,18 +6,18 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*cDest;
 	unsigned char	*cSrc;
-	size_t		i;
+	size_t		loop;
 
-	i = 0;
+	loop = 0;
 	cDest = (unsigned char *)dest;
 	cSrc = (unsigned char *)src;
-	while (i < n)
+	while (loop < n)
 	{
 		if (cDest == cSrc)
-			ft_memmove(cDest, cSrc, i);
+			ft_memmove(cDest, cSrc, loop);
 		else
-			cDest[i++] = *cSrc++;
+			cDest[loop++] = *cSrc++;
 	}
-	cDest[i] = '\0';
+	cDest[loop] = '\0';
 	return (cDest);
 }

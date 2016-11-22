@@ -6,23 +6,23 @@
 /*   By: rmoswela <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 13:52:30 by rmoswela          #+#    #+#             */
-/*   Updated: 2016/11/21 14:09:12 by rmoswela         ###   ########.fr       */
+/*   Updated: 2016/11/22 11:18:12 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 /*function to copy string src to dest including terminating character*/
 char		*ft_strcpy(char *dest, char *src)
 {
-	size_t	i;
+	size_t	loop;
 
-	i = 0;
-	while (src[i])
+	loop = 0;
+	while (src[loop])
 	{
-		dest[i] = src[i];
-		i++;
+		dest[loop] = src[loop];
+		loop++;
 	}
-	dest[i] = '\0';
+	dest[loop] = '\0';
 	return (dest);
 }

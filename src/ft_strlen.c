@@ -6,7 +6,7 @@
 /*   By: rmoswela <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 13:15:37 by rmoswela          #+#    #+#             */
-/*   Updated: 2016/11/21 13:41:15 by rmoswela         ###   ########.fr       */
+/*   Updated: 2016/11/22 11:19:00 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 /*function to compute the length of string str*/
 int			ft_strlen(const char *str)
 {
-	size_t	i;
+	size_t	loop;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return(i);
+	loop = 0;
+	while (str[loop] != '\0')
+		loop++;
+	return(loop);
 }

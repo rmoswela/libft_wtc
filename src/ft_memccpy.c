@@ -6,11 +6,11 @@
 /*   By: rmoswela <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 09:56:59 by rmoswela          #+#    #+#             */
-/*   Updated: 2016/11/21 10:45:13 by rmoswela         ###   ########.fr       */
+/*   Updated: 2016/11/22 11:20:15 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 /*function to copy n bytes from src to dest
  * if character c is occurs in src the copy stops
@@ -20,22 +20,22 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char	*cDest;
 	unsigned char	*cSrc;
 	unsigned char	iC;
-	size_t			i;
+	size_t			loop;
 
-	i = 0;
+	loop = 0;
 	iC = (unsigned char)c;
 	cDest = (unsigned char *)dest;
 	cSrc = (unsigned char *)src;
-	while (i < n && cDest != cSrc)
+	while (loop < n && cDest != cSrc)
 	{
 		if (*cSrc != iC)
-			cDest[i] = *cSrc++;
+			cDest[loop] = *cSrc++;
 		else
 		{
-			cDest[i] = *cSrc++;
+			cDest[loop] = *cSrc++;
 			return (cDest);
 		}
-		i++;
+		loop++;
 	}
 	return NULL;
 }
