@@ -6,7 +6,7 @@
 /*   By: rmoswela <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/08 06:57:54 by rmoswela          #+#    #+#             */
-/*   Updated: 2016/11/22 18:50:18 by                  ###   ########.fr       */
+/*   Updated: 2016/11/24 03:54:32 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void		*ft_memalloc(size_t size)
 		return (NULL);
 	else
 	{
-		ptr = malloc(size);
+		ptr = (void *)malloc(size);
 		if (ptr == NULL)
 			return (NULL);
 		else
